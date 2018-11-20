@@ -27,21 +27,124 @@ public class connexion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbl_connexion = new javax.swing.JLabel();
+        fld_mail = new javax.swing.JTextField();
+        fld_mdp = new javax.swing.JTextField();
+        lbl_mdp = new javax.swing.JLabel();
+        lbl_mail = new javax.swing.JLabel();
+        btn_valider = new javax.swing.JButton();
+        btn_annuler = new javax.swing.JButton();
+        btn_inscription = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(262, 400));
+        setMinimumSize(new java.awt.Dimension(262, 400));
+        setResizable(false);
+
+        lbl_connexion.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        lbl_connexion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_connexion.setText("Se connecter");
+        lbl_connexion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        fld_mail.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        fld_mail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fld_mailActionPerformed(evt);
+            }
+        });
+
+        fld_mdp.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        fld_mdp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fld_mdpActionPerformed(evt);
+            }
+        });
+
+        lbl_mdp.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lbl_mdp.setText("Mot de passe :");
+
+        lbl_mail.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lbl_mail.setText("Mail :");
+
+        btn_valider.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btn_valider.setText("Valider");
+        btn_valider.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_validerActionPerformed(evt);
+            }
+        });
+
+        btn_annuler.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btn_annuler.setText("Annuler");
+        btn_annuler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_annulerActionPerformed(evt);
+            }
+        });
+
+        btn_inscription.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btn_inscription.setText("Pas de compte ? Inscription");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_mdp)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(lbl_connexion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_inscription, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(btn_valider)
+                            .addGap(18, 18, 18)
+                            .addComponent(btn_annuler))
+                        .addComponent(lbl_mail, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(fld_mail, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(fld_mdp, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_connexion, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(lbl_mail)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fld_mail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_mdp)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fld_mdp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_valider)
+                    .addComponent(btn_annuler))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_inscription)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void fld_mailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fld_mailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fld_mailActionPerformed
+
+    private void fld_mdpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fld_mdpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fld_mdpActionPerformed
+
+    private void btn_validerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_validerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_validerActionPerformed
+
+    private void btn_annulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_annulerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_annulerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +182,13 @@ public class connexion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_annuler;
+    private javax.swing.JButton btn_inscription;
+    private javax.swing.JButton btn_valider;
+    private javax.swing.JTextField fld_mail;
+    private javax.swing.JTextField fld_mdp;
+    private javax.swing.JLabel lbl_connexion;
+    private javax.swing.JLabel lbl_mail;
+    private javax.swing.JLabel lbl_mdp;
     // End of variables declaration//GEN-END:variables
 }
