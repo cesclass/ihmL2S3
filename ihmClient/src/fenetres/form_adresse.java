@@ -27,7 +27,7 @@ public class form_adresse extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_connexion = new javax.swing.JLabel();
+        lbl_ajout_adresse = new javax.swing.JLabel();
         fld_pays = new javax.swing.JTextField();
         btn_annuler = new javax.swing.JButton();
         btn_valider = new javax.swing.JButton();
@@ -39,13 +39,17 @@ public class form_adresse extends javax.swing.JFrame {
         lbl_cp = new javax.swing.JLabel();
         lbl_ville = new javax.swing.JLabel();
         lbl_adresse = new javax.swing.JLabel();
+        fld_prenom = new javax.swing.JTextField();
+        lbl_prenom = new javax.swing.JLabel();
+        lbl_nom = new javax.swing.JLabel();
+        fld_nom = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lbl_connexion.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        lbl_connexion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl_connexion.setText("Ajouter une adresse");
-        lbl_connexion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lbl_ajout_adresse.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        lbl_ajout_adresse.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_ajout_adresse.setText("Ajouter une adresse");
+        lbl_ajout_adresse.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         fld_pays.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         fld_pays.addActionListener(new java.awt.event.ActionListener() {
@@ -100,6 +104,26 @@ public class form_adresse extends javax.swing.JFrame {
         lbl_adresse.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lbl_adresse.setText("Adresse :");
 
+        fld_prenom.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        fld_prenom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fld_prenomActionPerformed(evt);
+            }
+        });
+
+        lbl_prenom.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lbl_prenom.setText("Prenom :");
+
+        lbl_nom.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lbl_nom.setText("Nom :");
+
+        fld_nom.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        fld_nom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fld_nomActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -108,34 +132,49 @@ public class form_adresse extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_connexion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_ajout_adresse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 22, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(4, 26, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lbl_pays)
-                                    .addComponent(lbl_cp)
-                                    .addComponent(lbl_ville)
-                                    .addComponent(lbl_adresse))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(fld_ville, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                                    .addComponent(fld_cp)
-                                    .addComponent(fld_pays)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(btn_valider)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btn_annuler)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lbl_pays)
+                                            .addComponent(lbl_cp)
+                                            .addComponent(lbl_ville))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(fld_ville, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                                            .addComponent(fld_cp)
+                                            .addComponent(fld_pays)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lbl_prenom)
+                                            .addComponent(lbl_nom))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(fld_nom)
+                                            .addComponent(fld_prenom, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lbl_adresse)
+                                        .addGap(251, 251, 251))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(btn_valider)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btn_annuler)))))
                         .addGap(29, 29, 29))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbl_connexion, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbl_ajout_adresse, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fld_pays, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -148,6 +187,14 @@ public class form_adresse extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fld_cp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_cp))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fld_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_nom))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fld_prenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_prenom))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lbl_adresse)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -181,6 +228,14 @@ public class form_adresse extends javax.swing.JFrame {
     private void fld_villeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fld_villeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fld_villeActionPerformed
+
+    private void fld_prenomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fld_prenomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fld_prenomActionPerformed
+
+    private void fld_nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fld_nomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fld_nomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -222,13 +277,17 @@ public class form_adresse extends javax.swing.JFrame {
     private javax.swing.JButton btn_annuler;
     private javax.swing.JButton btn_valider;
     private javax.swing.JTextField fld_cp;
+    private javax.swing.JTextField fld_nom;
     private javax.swing.JTextField fld_pays;
+    private javax.swing.JTextField fld_prenom;
     private javax.swing.JTextField fld_ville;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbl_adresse;
-    private javax.swing.JLabel lbl_connexion;
+    private javax.swing.JLabel lbl_ajout_adresse;
     private javax.swing.JLabel lbl_cp;
+    private javax.swing.JLabel lbl_nom;
     private javax.swing.JLabel lbl_pays;
+    private javax.swing.JLabel lbl_prenom;
     private javax.swing.JLabel lbl_ville;
     // End of variables declaration//GEN-END:variables
 }

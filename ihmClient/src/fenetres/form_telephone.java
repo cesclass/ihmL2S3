@@ -30,12 +30,12 @@ public class form_telephone extends javax.swing.JFrame {
         fld_nom = new javax.swing.JTextField();
         fld_prenom = new javax.swing.JTextField();
         fld_numero = new javax.swing.JTextField();
-        lbl_numero = new javax.swing.JLabel();
         lbl_prenom = new javax.swing.JLabel();
         lbl_nom = new javax.swing.JLabel();
         btn_valider = new javax.swing.JButton();
         btn_annuler = new javax.swing.JButton();
         lbl_modif_num = new javax.swing.JLabel();
+        lbl_numero = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,9 +59,6 @@ public class form_telephone extends javax.swing.JFrame {
                 fld_numeroActionPerformed(evt);
             }
         });
-
-        lbl_numero.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        lbl_numero.setText("Numero :");
 
         lbl_prenom.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lbl_prenom.setText("Prenom :");
@@ -90,6 +87,9 @@ public class form_telephone extends javax.swing.JFrame {
         lbl_modif_num.setText("Modifier numero");
         lbl_modif_num.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        lbl_numero.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lbl_numero.setText("Numero :");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -99,10 +99,11 @@ public class form_telephone extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_modif_num, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_nom, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl_prenom, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl_numero, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(1, 1, 1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbl_nom)
+                            .addComponent(lbl_prenom)
+                            .addComponent(lbl_numero))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(fld_nom)
@@ -156,7 +157,7 @@ public class form_telephone extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_fld_numeroActionPerformed
 
-    private void btn_validerActionPerformed(java.awt.event.Actiolbl_numero) {//GEN-FIRST:event_btn_validerActionPerformed
+    private void btn_validerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_validerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_validerActionPerformed
 
