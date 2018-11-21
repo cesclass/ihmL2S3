@@ -151,7 +151,7 @@ public class connexion extends javax.swing.JFrame {
     }//GEN-LAST:event_fld_mdpActionPerformed
 
     private void btn_validerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_validerActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btn_validerActionPerformed
 
     private void btn_annulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_annulerActionPerformed

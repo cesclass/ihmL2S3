@@ -13,7 +13,8 @@ import fenetres.*;
  */
 public class IhmClient {
 
-    static accueil accueil = new accueil();
+    static accueil_1 accueil_1 = new accueil_1();
+    static connexion connexion = new connexion();
     
    /**
      * @param args the command line arguments
@@ -32,37 +33,73 @@ public class IhmClient {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(accueil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(accueil_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(accueil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(accueil_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(accueil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(accueil_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(accueil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(accueil_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                accueil.setVisible(true);
+                accueil_1.setVisible(true);
             }
         });
     }
     
-    public static void ouvriraccueil(){
+    public static void ouvrir_accueil_1(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                accueil.setVisible(true);
+                accueil_1.setVisible(true);
                 
             }
         });
     }
     
-    public static void fermeraccueil(){
+    public static void bloquer_accueil_1(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                accueil.setVisible(false);
+                accueil_1.setEnabled(false);
+                
+            }
+        });
+    }
+    
+    public static void debloquer_accueil_1(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                accueil_1.setEnabled(true);
+                
+            }
+        });
+    }
+    
+    public static void fermer_accueil_1(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                accueil_1.setVisible(false);
+                
+            }
+        });
+    }
+    
+    public static void ouvrir_connexion(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                connexion.setVisible(true);
+                
+            }
+        });
+    }
+    
+    public static void fermer_connexion(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                connexion.setVisible(false);
                 
             }
         });
