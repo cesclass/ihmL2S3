@@ -30,7 +30,7 @@ public class restaurant extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lbl_eatvite = new javax.swing.JLabel();
         lbl_connexion = new javax.swing.JLabel();
         lbl_inscription = new javax.swing.JLabel();
         lbl_pseudo = new javax.swing.JLabel();
@@ -41,7 +41,12 @@ public class restaurant extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setText("EAT' VITE");
+        lbl_eatvite.setText("EAT' VITE");
+        lbl_eatvite.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_eatviteMouseClicked(evt);
+            }
+        });
 
         lbl_connexion.setText("se connecter");
         lbl_connexion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -69,7 +74,7 @@ public class restaurant extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lbl_eatvite)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1057, Short.MAX_VALUE)
                 .addComponent(lbl_deco)
                 .addGap(18, 18, 18)
@@ -85,7 +90,7 @@ public class restaurant extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(lbl_eatvite)
                     .addComponent(lbl_connexion)
                     .addComponent(lbl_inscription)
                     .addComponent(lbl_pseudo)
@@ -118,14 +123,19 @@ public class restaurant extends javax.swing.JFrame {
 
     private void lbl_connexionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_connexionMouseClicked
         IhmClient.ouvrir_connexion();
-        IhmClient.bloquer_accueil();
+        IhmClient.bloquer_restaurant();
 
     }//GEN-LAST:event_lbl_connexionMouseClicked
 
     private void lbl_inscriptionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_inscriptionMouseClicked
-        IhmClient.bloquer_accueil();
+        IhmClient.bloquer_restaurant();
         IhmClient.ouvrir_inscription();
     }//GEN-LAST:event_lbl_inscriptionMouseClicked
+
+    private void lbl_eatviteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_eatviteMouseClicked
+        IhmClient.fermer_restaurant();
+        IhmClient.ouvrir_accueil();
+    }//GEN-LAST:event_lbl_eatviteMouseClicked
 
     public void changePseudo(String mail) {
         lbl_inscription.setText("");
@@ -170,10 +180,10 @@ public class restaurant extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbl_connexion;
     private javax.swing.JLabel lbl_deco;
+    private javax.swing.JLabel lbl_eatvite;
     private javax.swing.JLabel lbl_inscription;
     private javax.swing.JLabel lbl_pseudo;
     // End of variables declaration//GEN-END:variables

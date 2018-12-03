@@ -17,7 +17,9 @@ public class IhmClient {
     public static connexion connexion = new connexion();
     public static form_inscription inscription = new form_inscription();
     public static profil profil = new profil();
+    public static panier panier = new panier();
     public static restaurant restaurant = new restaurant();
+    
     
    /**
      * @param args the command line arguments
@@ -135,6 +137,24 @@ public class IhmClient {
         });
     }
     
+    public static void bloquer_profil(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                profil.setEnabled(false);
+                
+            }
+        });
+    }
+    
+    public static void debloquer_profil(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                profil.setEnabled(true);
+                
+            }
+        });
+    }
+    
     public static void fermer_profil(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -153,10 +173,64 @@ public class IhmClient {
         });
     }
     
+    public static void bloquer_restaurant(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                restaurant.setEnabled(false);
+                
+            }
+        });
+    }
+    
+    public static void debloquer_restaurant(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                restaurant.setEnabled(true);
+                
+            }
+        });
+    }
+    
     public static void fermer_restaurant(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 restaurant.setVisible(false);
+                
+            }
+        });
+    }
+    
+    public static void ouvrir_panier(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                panier.setVisible(true);
+                
+            }
+        });
+    }
+    
+    public static void bloquer_panier(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                panier.setEnabled(false);
+                
+            }
+        });
+    }
+    
+    public static void debloquer_panier(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                panier.setEnabled(true);
+                
+            }
+        });
+    }
+    
+    public static void fermer_panier(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                panier.setVisible(false);
                 
             }
         });

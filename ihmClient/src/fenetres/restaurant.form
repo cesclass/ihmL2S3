@@ -53,7 +53,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_eatvite" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="1057" max="32767" attributes="0"/>
                   <Component id="lbl_deco" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -71,7 +71,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_eatvite" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_connexion" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_inscription" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_pseudo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -83,10 +83,13 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lbl_eatvite">
           <Properties>
             <Property name="text" type="java.lang.String" value="EAT&apos; VITE"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_eatviteMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_connexion">
           <Properties>

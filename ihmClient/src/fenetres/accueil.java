@@ -30,7 +30,7 @@ public class accueil extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lbl_eatvite = new javax.swing.JLabel();
         lbl_connexion = new javax.swing.JLabel();
         lbl_inscription = new javax.swing.JLabel();
         lbl_pseudo = new javax.swing.JLabel();
@@ -68,7 +68,7 @@ public class accueil extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setText("EAT' VITE");
+        lbl_eatvite.setText("EAT' VITE");
 
         lbl_connexion.setText("se connecter");
         lbl_connexion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -102,7 +102,7 @@ public class accueil extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lbl_eatvite)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lbl_deco)
                 .addGap(18, 18, 18)
@@ -118,7 +118,7 @@ public class accueil extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(lbl_eatvite)
                     .addComponent(lbl_connexion)
                     .addComponent(lbl_inscription)
                     .addComponent(lbl_pseudo)
@@ -350,6 +350,14 @@ public class accueil extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("Mon panier");
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel14MouseEntered(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -499,6 +507,15 @@ public class accueil extends javax.swing.JFrame {
         IhmClient.ouvrir_restaurant();
     }//GEN-LAST:event_lbl_adresseResto2MouseClicked
 
+    private void jLabel14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel14MouseEntered
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        IhmClient.fermer_accueil();
+        IhmClient.ouvrir_panier();
+    }//GEN-LAST:event_jLabel14MouseClicked
+
     public void changePseudo(String mail) {
         lbl_inscription.setText("");
         lbl_connexion.setText("");
@@ -544,7 +561,6 @@ public class accueil extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField fld_adress;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
@@ -564,6 +580,7 @@ public class accueil extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_adresseResto2;
     private javax.swing.JLabel lbl_connexion;
     private javax.swing.JLabel lbl_deco;
+    private javax.swing.JLabel lbl_eatvite;
     private javax.swing.JLabel lbl_inscription;
     private javax.swing.JLabel lbl_livraisonResto1;
     private javax.swing.JLabel lbl_livraisonResto2;

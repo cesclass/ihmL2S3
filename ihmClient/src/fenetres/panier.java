@@ -11,12 +11,12 @@ import ihmclient.IhmClient;
  *
  * @author cyril
  */
-public class profil extends javax.swing.JFrame {
+public class panier extends javax.swing.JFrame {
 
     /**
      * Creates new form accueil_1
      */
-    public profil() {
+    public panier() {
         initComponents();
     }
 
@@ -123,16 +123,17 @@ public class profil extends javax.swing.JFrame {
 
     private void lbl_connexionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_connexionMouseClicked
         IhmClient.ouvrir_connexion();
-        IhmClient.bloquer_profil();
+        IhmClient.bloquer_panier();
+
     }//GEN-LAST:event_lbl_connexionMouseClicked
 
     private void lbl_inscriptionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_inscriptionMouseClicked
-        IhmClient.bloquer_profil();
+        IhmClient.bloquer_panier();
         IhmClient.ouvrir_inscription();
     }//GEN-LAST:event_lbl_inscriptionMouseClicked
 
     private void lbl_eatviteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_eatviteMouseClicked
-        IhmClient.fermer_profil();
+        IhmClient.fermer_panier();
         IhmClient.ouvrir_accueil();
     }//GEN-LAST:event_lbl_eatviteMouseClicked
 
