@@ -5,6 +5,8 @@
  */
 package fenetres;
 
+import ihmclient.IhmClient;
+
 /**
  *
  * @author cyril
@@ -151,6 +153,10 @@ public class connexion extends javax.swing.JFrame {
     }//GEN-LAST:event_fld_mdpActionPerformed
 
     private void btn_validerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_validerActionPerformed
+        IhmClient.debloquer_accueil();
+        IhmClient.fermer_connexion();
+        IhmClient.accueil.changePseudo(fld_mail.getText());
+        
         
     }//GEN-LAST:event_btn_validerActionPerformed
 

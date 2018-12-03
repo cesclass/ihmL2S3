@@ -13,8 +13,8 @@ import fenetres.*;
  */
 public class IhmClient {
 
-    static accueil accueil_1 = new accueil();
-    static connexion connexion = new connexion();
+    public static accueil accueil = new accueil();
+    public static connexion connexion = new connexion();
     
    /**
      * @param args the command line arguments
@@ -46,42 +46,42 @@ public class IhmClient {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                accueil_1.setVisible(true);
+                accueil.setVisible(true);
             }
         });
     }
     
-    public static void ouvrir_accueil_1(){
+    public static void ouvrir_accueil(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                accueil_1.setVisible(true);
+                accueil.setVisible(true);
                 
             }
         });
     }
     
-    public static void bloquer_accueil_1(){
+    public static void bloquer_accueil(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                accueil_1.setEnabled(false);
+                accueil.setEnabled(false);
                 
             }
         });
     }
     
-    public static void debloquer_accueil_1(){
+    public static void debloquer_accueil(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                accueil_1.setEnabled(true);
+                accueil.setEnabled(true);
                 
             }
         });
     }
     
-    public static void fermer_accueil_1(){
+    public static void fermer_accueil(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                accueil_1.setVisible(false);
+                accueil.setVisible(false);
                 
             }
         });
