@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -105,6 +105,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="s&apos;inscrire"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_inscriptionMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_pseudo">
         </Component>
@@ -157,7 +160,7 @@
                           <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                           <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jTextField2" min="-2" pref="265" max="-2" attributes="0"/>
+                          <Component id="fld_adress" min="-2" pref="265" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -173,7 +176,7 @@
                       <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txt_date" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="fld_adress" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -226,9 +229,9 @@
             <Property name="text" type="java.lang.String" value="Adresse :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="fld_adress">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fld_adressActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField3">
@@ -280,8 +283,8 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="pan_resto3" min="-2" max="-2" attributes="0"/>
                                       <Component id="pan_restopp1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_adress1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_adress2" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="263" max="32767" attributes="0"/>
@@ -290,7 +293,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_adress3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -306,11 +309,11 @@
                       <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_adress1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_adress2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbl_adress3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -338,11 +341,11 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbl_adresseResto" min="-2" pref="526" max="-2" attributes="0"/>
+                          <Component id="lbl_adresseResto1" min="-2" pref="526" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="lbl_prixResto" min="-2" pref="299" max="-2" attributes="0"/>
+                              <Component id="lbl_prixResto1" min="-2" pref="299" max="-2" attributes="0"/>
                               <EmptySpace pref="483" max="32767" attributes="0"/>
-                              <Component id="lbl_livraisonResto" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_livraisonResto1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -353,11 +356,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lbl_adresseResto" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_adresseResto1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl_prixResto" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="lbl_livraisonResto" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="lbl_prixResto1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="lbl_livraisonResto1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -365,17 +368,17 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lbl_adresseResto">
+            <Component class="javax.swing.JLabel" name="lbl_adresseResto1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Restaurant 1 - adresse du restaurant 1"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbl_prixResto">
+            <Component class="javax.swing.JLabel" name="lbl_prixResto1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Prix moyen du restaurant : 00&#x20ac;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbl_livraisonResto">
+            <Component class="javax.swing.JLabel" name="lbl_livraisonResto1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Temps de livraison estim&#xe9; : 00 minutes"/>
               </Properties>
@@ -397,11 +400,11 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbl_adresseResto3" alignment="0" min="-2" pref="526" max="-2" attributes="0"/>
+                          <Component id="lbl_adresseResto2" alignment="0" min="-2" pref="526" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="lbl_prixResto3" min="-2" pref="299" max="-2" attributes="0"/>
+                              <Component id="lbl_prixResto2" min="-2" pref="299" max="-2" attributes="0"/>
                               <EmptySpace pref="483" max="32767" attributes="0"/>
-                              <Component id="lbl_livraisonResto3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_livraisonResto2" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -412,11 +415,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lbl_adresseResto3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_adresseResto2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl_prixResto3" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="lbl_livraisonResto3" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="lbl_prixResto2" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="lbl_livraisonResto2" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -424,17 +427,17 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lbl_adresseResto3">
+            <Component class="javax.swing.JLabel" name="lbl_adresseResto2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Restaurant 1 - adresse du restaurant 1"/>
+                <Property name="text" type="java.lang.String" value="Restaurant 2 - adresse du restaurant 2"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbl_prixResto3">
+            <Component class="javax.swing.JLabel" name="lbl_prixResto2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Prix moyen du restaurant : 00&#x20ac;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbl_livraisonResto3">
+            <Component class="javax.swing.JLabel" name="lbl_livraisonResto2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Temps de livraison estim&#xe9; : 00 minutes"/>
               </Properties>
@@ -449,20 +452,29 @@
             <Property name="text" type="java.lang.String" value="O&#xf9; &#xea;tes vous aujourd&apos;hui ?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="lbl_adress1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Adresse 1"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_adress1MouseClicked"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="lbl_adress2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Adresse 2"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_adress2MouseClicked"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel12">
+        <Component class="javax.swing.JLabel" name="lbl_adress3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Adresse 3"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_adress3MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel13">
           <Properties>

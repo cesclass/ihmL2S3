@@ -15,6 +15,7 @@ public class IhmClient {
 
     public static accueil accueil = new accueil();
     public static connexion connexion = new connexion();
+    public static form_inscription inscription = new form_inscription();
     
    /**
      * @param args the command line arguments
@@ -100,6 +101,24 @@ public class IhmClient {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 connexion.setVisible(false);
+                
+            }
+        });
+    }
+    
+    public static void ouvrir_inscription(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                inscription.setVisible(true);
+                
+            }
+        });
+    }
+    
+    public static void fermer_inscription(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                inscription.setVisible(false);
                 
             }
         });

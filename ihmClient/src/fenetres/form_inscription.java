@@ -5,6 +5,8 @@
  */
 package fenetres;
 
+import ihmclient.IhmClient;
+
 /**
  *
  * @author cyril
@@ -247,12 +249,12 @@ public class form_inscription extends javax.swing.JFrame {
                     .addComponent(fld_prenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_prenom))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fld_numero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_numero)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fld_mail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_mail)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(fld_mail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_mail)))
+                        .addComponent(fld_numero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl_numero)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
@@ -313,11 +315,14 @@ public class form_inscription extends javax.swing.JFrame {
     }//GEN-LAST:event_fld_prenomActionPerformed
 
     private void btn_validerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_validerActionPerformed
-        // TODO add your handling code here:
+        IhmClient.accueil.changePseudo(fld_mail.getText());
+        IhmClient.debloquer_accueil();
+        IhmClient.fermer_inscription();
     }//GEN-LAST:event_btn_validerActionPerformed
 
     private void btn_annulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_annulerActionPerformed
-        // TODO add your handling code here:
+        IhmClient.debloquer_accueil();
+        IhmClient.fermer_inscription();
     }//GEN-LAST:event_btn_annulerActionPerformed
 
     private void fld_numeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fld_numeroActionPerformed
