@@ -55,6 +55,7 @@ public class form_inscription extends javax.swing.JFrame {
         lbl_mdp2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inscription");
 
         lbl_inscription.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lbl_inscription.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

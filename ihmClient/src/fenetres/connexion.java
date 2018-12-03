@@ -39,7 +39,7 @@ public class connexion extends javax.swing.JFrame {
         btn_inscription = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(262, 400));
+        setTitle("Connexion");
         setMinimumSize(new java.awt.Dimension(262, 400));
         setResizable(false);
 
@@ -93,17 +93,6 @@ public class connexion extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_mdp)
-                            .addComponent(lbl_mail))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(fld_mdp)
-                            .addComponent(fld_mail)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(16, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -112,7 +101,17 @@ public class connexion extends javax.swing.JFrame {
                                 .addComponent(btn_valider)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btn_annuler)))
-                        .addGap(6, 6, 6)))
+                        .addGap(6, 6, 6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbl_mdp)
+                                    .addComponent(lbl_mail))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(fld_mdp)
+                            .addComponent(fld_mail))))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
