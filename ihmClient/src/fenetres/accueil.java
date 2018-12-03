@@ -48,11 +48,11 @@ public class accueil extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        pan_restopp1 = new javax.swing.JPanel();
+        pan_resto1 = new javax.swing.JPanel();
         lbl_adresseResto1 = new javax.swing.JLabel();
         lbl_prixResto1 = new javax.swing.JLabel();
         lbl_livraisonResto1 = new javax.swing.JLabel();
-        pan_resto3 = new javax.swing.JPanel();
+        pan_resto2 = new javax.swing.JPanel();
         lbl_adresseResto2 = new javax.swing.JLabel();
         lbl_prixResto2 = new javax.swing.JLabel();
         lbl_livraisonResto2 = new javax.swing.JLabel();
@@ -81,6 +81,12 @@ public class accueil extends javax.swing.JFrame {
         lbl_inscription.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_inscriptionMouseClicked(evt);
+            }
+        });
+
+        lbl_pseudo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_pseudoMouseClicked(evt);
             }
         });
 
@@ -227,69 +233,89 @@ public class accueil extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        pan_restopp1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pan_resto1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pan_resto1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pan_resto1MouseClicked(evt);
+            }
+        });
 
         lbl_adresseResto1.setText("Restaurant 1 - adresse du restaurant 1");
+        lbl_adresseResto1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_adresseResto1MouseClicked(evt);
+            }
+        });
 
         lbl_prixResto1.setText("Prix moyen du restaurant : 00€");
 
         lbl_livraisonResto1.setText("Temps de livraison estimé : 00 minutes");
 
-        javax.swing.GroupLayout pan_restopp1Layout = new javax.swing.GroupLayout(pan_restopp1);
-        pan_restopp1.setLayout(pan_restopp1Layout);
-        pan_restopp1Layout.setHorizontalGroup(
-            pan_restopp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pan_restopp1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pan_resto1Layout = new javax.swing.GroupLayout(pan_resto1);
+        pan_resto1.setLayout(pan_resto1Layout);
+        pan_resto1Layout.setHorizontalGroup(
+            pan_resto1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pan_resto1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(pan_restopp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pan_resto1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_adresseResto1, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pan_restopp1Layout.createSequentialGroup()
+                    .addGroup(pan_resto1Layout.createSequentialGroup()
                         .addComponent(lbl_prixResto1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 483, Short.MAX_VALUE)
                         .addComponent(lbl_livraisonResto1)))
                 .addContainerGap())
         );
-        pan_restopp1Layout.setVerticalGroup(
-            pan_restopp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pan_restopp1Layout.createSequentialGroup()
+        pan_resto1Layout.setVerticalGroup(
+            pan_resto1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pan_resto1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbl_adresseResto1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pan_restopp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pan_resto1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_prixResto1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_livraisonResto1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pan_resto3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pan_resto2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pan_resto2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pan_resto2MouseClicked(evt);
+            }
+        });
 
         lbl_adresseResto2.setText("Restaurant 2 - adresse du restaurant 2");
+        lbl_adresseResto2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_adresseResto2MouseClicked(evt);
+            }
+        });
 
         lbl_prixResto2.setText("Prix moyen du restaurant : 00€");
 
         lbl_livraisonResto2.setText("Temps de livraison estimé : 00 minutes");
 
-        javax.swing.GroupLayout pan_resto3Layout = new javax.swing.GroupLayout(pan_resto3);
-        pan_resto3.setLayout(pan_resto3Layout);
-        pan_resto3Layout.setHorizontalGroup(
-            pan_resto3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pan_resto3Layout.createSequentialGroup()
+        javax.swing.GroupLayout pan_resto2Layout = new javax.swing.GroupLayout(pan_resto2);
+        pan_resto2.setLayout(pan_resto2Layout);
+        pan_resto2Layout.setHorizontalGroup(
+            pan_resto2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pan_resto2Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(pan_resto3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pan_resto2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_adresseResto2, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pan_resto3Layout.createSequentialGroup()
+                    .addGroup(pan_resto2Layout.createSequentialGroup()
                         .addComponent(lbl_prixResto2, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 483, Short.MAX_VALUE)
                         .addComponent(lbl_livraisonResto2)))
                 .addContainerGap())
         );
-        pan_resto3Layout.setVerticalGroup(
-            pan_resto3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pan_resto3Layout.createSequentialGroup()
+        pan_resto2Layout.setVerticalGroup(
+            pan_resto2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pan_resto2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbl_adresseResto2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pan_resto3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pan_resto2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_prixResto2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_livraisonResto2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -340,8 +366,8 @@ public class accueil extends javax.swing.JFrame {
                                 .addComponent(jLabel14))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(pan_resto3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(pan_restopp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(pan_resto2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(pan_resto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lbl_adress1)
                                     .addComponent(lbl_adress2)
                                     .addComponent(jLabel13))
@@ -367,9 +393,9 @@ public class accueil extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel13)
                 .addGap(18, 18, 18)
-                .addComponent(pan_restopp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pan_resto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(pan_resto3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pan_resto2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(390, Short.MAX_VALUE))
         );
 
@@ -394,30 +420,6 @@ public class accueil extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt_date1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_date1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_date1ActionPerformed
-
-    private void txt_dateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dateActionPerformed
-
-    private void txt_date2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_date2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_date2ActionPerformed
-
-    private void fld_adressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fld_adressActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fld_adressActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
     private void lbl_decoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_decoMouseClicked
         lbl_inscription.setText("s'inscrire");
         lbl_connexion.setText("se connecter");
@@ -431,22 +433,71 @@ public class accueil extends javax.swing.JFrame {
 
     }//GEN-LAST:event_lbl_connexionMouseClicked
 
-    private void lbl_adress1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_adress1MouseClicked
-        fld_adress.setText(lbl_adress1.getText());
-    }//GEN-LAST:event_lbl_adress1MouseClicked
-
-    private void lbl_adress2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_adress2MouseClicked
-        fld_adress.setText(lbl_adress2.getText());
-    }//GEN-LAST:event_lbl_adress2MouseClicked
+    private void lbl_inscriptionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_inscriptionMouseClicked
+        IhmClient.bloquer_accueil();
+        IhmClient.ouvrir_inscription();
+    }//GEN-LAST:event_lbl_inscriptionMouseClicked
 
     private void lbl_adress3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_adress3MouseClicked
         fld_adress.setText(lbl_adress3.getText());
     }//GEN-LAST:event_lbl_adress3MouseClicked
 
-    private void lbl_inscriptionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_inscriptionMouseClicked
-        IhmClient.bloquer_accueil();
-        IhmClient.ouvrir_inscription();
-    }//GEN-LAST:event_lbl_inscriptionMouseClicked
+    private void lbl_adress2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_adress2MouseClicked
+        fld_adress.setText(lbl_adress2.getText());
+    }//GEN-LAST:event_lbl_adress2MouseClicked
+
+    private void lbl_adress1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_adress1MouseClicked
+        fld_adress.setText(lbl_adress1.getText());
+    }//GEN-LAST:event_lbl_adress1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void fld_adressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fld_adressActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fld_adressActionPerformed
+
+    private void txt_date2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_date2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_date2ActionPerformed
+
+    private void txt_dateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dateActionPerformed
+
+    private void txt_date1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_date1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_date1ActionPerformed
+
+    private void lbl_pseudoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_pseudoMouseClicked
+        IhmClient.fermer_accueil();
+        IhmClient.ouvrir_profil();
+    }//GEN-LAST:event_lbl_pseudoMouseClicked
+
+    private void pan_resto1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pan_resto1MouseClicked
+        IhmClient.fermer_accueil();
+        IhmClient.ouvrir_restaurant();
+    }//GEN-LAST:event_pan_resto1MouseClicked
+
+    private void lbl_adresseResto1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_adresseResto1MouseClicked
+        IhmClient.fermer_accueil();
+        IhmClient.ouvrir_restaurant();
+    }//GEN-LAST:event_lbl_adresseResto1MouseClicked
+
+    private void pan_resto2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pan_resto2MouseClicked
+        IhmClient.fermer_accueil();
+        IhmClient.ouvrir_restaurant();
+    }//GEN-LAST:event_pan_resto2MouseClicked
+
+    private void lbl_adresseResto2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_adresseResto2MouseClicked
+        IhmClient.fermer_accueil();
+        IhmClient.ouvrir_restaurant();
+    }//GEN-LAST:event_lbl_adresseResto2MouseClicked
 
     public void changePseudo(String mail) {
         lbl_inscription.setText("");
@@ -519,8 +570,8 @@ public class accueil extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_prixResto1;
     private javax.swing.JLabel lbl_prixResto2;
     private javax.swing.JLabel lbl_pseudo;
-    private javax.swing.JPanel pan_resto3;
-    private javax.swing.JPanel pan_restopp1;
+    private javax.swing.JPanel pan_resto1;
+    private javax.swing.JPanel pan_resto2;
     private javax.swing.JTextField txt_date;
     private javax.swing.JTextField txt_date1;
     private javax.swing.JTextField txt_date2;

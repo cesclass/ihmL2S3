@@ -110,6 +110,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_pseudo">
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_pseudoMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_deco">
           <Events>
@@ -281,8 +284,8 @@
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="pan_resto3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="pan_restopp1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="pan_resto2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="pan_resto1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lbl_adress1" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lbl_adress2" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -317,16 +320,16 @@
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="pan_restopp1" min="-2" max="-2" attributes="0"/>
+                  <Component id="pan_resto1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="pan_resto3" min="-2" max="-2" attributes="0"/>
+                  <Component id="pan_resto2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="390" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="pan_restopp1">
+        <Container class="javax.swing.JPanel" name="pan_resto1">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -334,6 +337,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pan_resto1MouseClicked"/>
+          </Events>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -372,6 +378,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Restaurant 1 - adresse du restaurant 1"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_adresseResto1MouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_prixResto1">
               <Properties>
@@ -385,7 +394,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="pan_resto3">
+        <Container class="javax.swing.JPanel" name="pan_resto2">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -393,6 +402,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pan_resto2MouseClicked"/>
+          </Events>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -431,6 +443,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Restaurant 2 - adresse du restaurant 2"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_adresseResto2MouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_prixResto2">
               <Properties>

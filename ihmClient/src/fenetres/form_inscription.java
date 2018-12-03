@@ -315,9 +315,11 @@ public class form_inscription extends javax.swing.JFrame {
     }//GEN-LAST:event_fld_prenomActionPerformed
 
     private void btn_validerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_validerActionPerformed
-        IhmClient.accueil.changePseudo(fld_mail.getText());
         IhmClient.debloquer_accueil();
         IhmClient.fermer_inscription();
+        IhmClient.accueil.changePseudo(fld_mail.getText());
+        IhmClient.profil.changePseudo(fld_mail.getText()); 
+        IhmClient.restaurant.changePseudo(fld_mail.getText()); 
     }//GEN-LAST:event_btn_validerActionPerformed
 
     private void btn_annulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_annulerActionPerformed

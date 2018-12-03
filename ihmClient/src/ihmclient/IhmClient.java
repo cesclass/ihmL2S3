@@ -16,6 +16,8 @@ public class IhmClient {
     public static accueil accueil = new accueil();
     public static connexion connexion = new connexion();
     public static form_inscription inscription = new form_inscription();
+    public static profil profil = new profil();
+    public static restaurant restaurant = new restaurant();
     
    /**
      * @param args the command line arguments
@@ -119,6 +121,42 @@ public class IhmClient {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 inscription.setVisible(false);
+                
+            }
+        });
+    }
+    
+    public static void ouvrir_profil(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                profil.setVisible(true);
+                
+            }
+        });
+    }
+    
+    public static void fermer_profil(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                profil.setVisible(false);
+                
+            }
+        });
+    }
+    
+    public static void ouvrir_restaurant(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                restaurant.setVisible(true);
+                
+            }
+        });
+    }
+    
+    public static void fermer_restaurant(){
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                restaurant.setVisible(false);
                 
             }
         });
