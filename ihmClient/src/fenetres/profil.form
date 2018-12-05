@@ -144,9 +144,9 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="lbl_bienvenue1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_addresse1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_addresse2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbl_addresse3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_adresse1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_adresse2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_adresse3" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="btn_adresse" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="405" max="-2" attributes="0"/>
@@ -189,17 +189,17 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_addresse1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_adresse1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_carte1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_addresse2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_adresse2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_carte2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_addresse3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_adresse3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_carte3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -248,14 +248,14 @@
             <Property name="text" type="java.lang.String" value="Vos adresses :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_addresse1">
+        <Component class="javax.swing.JLabel" name="lbl_adresse1">
           <Properties>
             <Property name="text" type="java.lang.String" value="42 Rue nullepart - Nowhere 42000"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_addresse2">
+        <Component class="javax.swing.JLabel" name="lbl_adresse2">
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_addresse3">
+        <Component class="javax.swing.JLabel" name="lbl_adresse3">
         </Component>
         <Component class="javax.swing.JButton" name="btn_adresse">
           <Properties>

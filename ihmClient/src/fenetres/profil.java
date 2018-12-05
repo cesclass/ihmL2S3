@@ -39,9 +39,9 @@ public class profil extends javax.swing.JFrame {
         lbl_bienvenue = new javax.swing.JLabel();
         lbl_panier = new javax.swing.JLabel();
         lbl_bienvenue1 = new javax.swing.JLabel();
-        lbl_addresse1 = new javax.swing.JLabel();
-        lbl_addresse2 = new javax.swing.JLabel();
-        lbl_addresse3 = new javax.swing.JLabel();
+        lbl_adresse1 = new javax.swing.JLabel();
+        lbl_adresse2 = new javax.swing.JLabel();
+        lbl_adresse3 = new javax.swing.JLabel();
         btn_adresse = new javax.swing.JButton();
         lbl_bienvenue2 = new javax.swing.JLabel();
         lbl_carte1 = new javax.swing.JLabel();
@@ -134,7 +134,7 @@ public class profil extends javax.swing.JFrame {
         lbl_bienvenue1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         lbl_bienvenue1.setText("Vos adresses :");
 
-        lbl_addresse1.setText("42 Rue nullepart - Nowhere 42000");
+        lbl_adresse1.setText("42 Rue nullepart - Nowhere 42000");
 
         btn_adresse.setText("Ajouter");
 
@@ -168,9 +168,9 @@ public class profil extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lbl_bienvenue1)
-                                    .addComponent(lbl_addresse1)
-                                    .addComponent(lbl_addresse2)
-                                    .addComponent(lbl_addresse3)
+                                    .addComponent(lbl_adresse1)
+                                    .addComponent(lbl_adresse2)
+                                    .addComponent(lbl_adresse3)
                                     .addComponent(btn_adresse))
                                 .addGap(405, 405, 405)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,15 +201,15 @@ public class profil extends javax.swing.JFrame {
                     .addComponent(lbl_bienvenue2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_addresse1)
+                    .addComponent(lbl_adresse1)
                     .addComponent(lbl_carte1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_addresse2)
+                    .addComponent(lbl_adresse2)
                     .addComponent(lbl_carte2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_addresse3)
+                    .addComponent(lbl_adresse3)
                     .addComponent(lbl_carte3))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -247,6 +247,8 @@ public class profil extends javax.swing.JFrame {
         lbl_connexion.setText("se connecter");
         lbl_deco.setText("");
         lbl_pseudo.setText("");
+        IhmClient.fermer_profil();
+        IhmClient.ouvrir_accueil();
     }//GEN-LAST:event_lbl_decoMouseClicked
 
     private void lbl_connexionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_connexionMouseClicked
@@ -281,8 +283,40 @@ public class profil extends javax.swing.JFrame {
         lbl_bienvenue.setText("Bienvenue " + lbl_pseudo.getText());
     }
     
-    public void ajouterAdresse() {
-        
+    public void initAdresse(String adresse, String ville, String cp) {
+        lbl_adresse1.setText(adresse + " - " + ville + " " + cp);
+        lbl_adresse2.setText("");
+        lbl_adresse3.setText("");
+    }
+    
+    public void initCarte() {
+        lbl_carte1.setText("");
+        lbl_carte2.setText("");
+        lbl_carte3.setText("");
+    }
+    
+    public void ajouterAdresse(String adresse, String ville, String cp) {
+        if(lbl_adresse1.getText() == "") {
+            lbl_adresse1.setText(adresse + " - " + ville + " " + cp);
+        } else if(lbl_adresse2.getText() == "") {
+            lbl_adresse2.setText(adresse + " - " + ville + " " + cp);
+        } else if(lbl_adresse3.getText() == "") {
+            lbl_adresse3.setText(adresse + " - " + ville + " " + cp);
+        }
+    }
+    
+    public void ajouterCarte(String nom, String prenom, String numero) {
+        if(lbl_carte1.getText() == "") {
+            lbl_carte1.setText(nom + " " + prenom + " : " + numero);
+        } else if(lbl_carte2.getText() == "") {
+            lbl_carte2.setText(nom + " " + prenom + " : " + numero);
+        } else if(lbl_carte3.getText() == "") {
+            lbl_carte3.setText(nom + " " + prenom + " : " + numero);
+        }
+    }
+    
+    public void modifierNumero(String numero) {
+        lbl_numero.setText(numero);
     }
     
     /**
@@ -328,9 +362,9 @@ public class profil extends javax.swing.JFrame {
     private javax.swing.JButton btn_numero;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel lbl_addresse1;
-    private javax.swing.JLabel lbl_addresse2;
-    private javax.swing.JLabel lbl_addresse3;
+    private javax.swing.JLabel lbl_adresse1;
+    private javax.swing.JLabel lbl_adresse2;
+    private javax.swing.JLabel lbl_adresse3;
     private javax.swing.JLabel lbl_bienvenue;
     private javax.swing.JLabel lbl_bienvenue1;
     private javax.swing.JLabel lbl_bienvenue2;
