@@ -61,7 +61,7 @@ public class accueil extends javax.swing.JFrame {
         lbl_adress2 = new javax.swing.JLabel();
         lbl_adress3 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        lbl_panier = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Accueil");
@@ -349,14 +349,14 @@ public class accueil extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel13.setText("Les Restaurants :");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel14.setText("Mon panier");
-        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+        lbl_panier.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_panier.setText("Mon panier");
+        lbl_panier.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel14MouseClicked(evt);
+                lbl_panierMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel14MouseEntered(evt);
+                lbl_panierMouseEntered(evt);
             }
         });
 
@@ -368,23 +368,19 @@ public class accueil extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel14))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(pan_resto2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(pan_resto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbl_adress1)
-                                    .addComponent(lbl_adress2)
-                                    .addComponent(jLabel13))
-                                .addGap(0, 263, Short.MAX_VALUE)))
-                        .addContainerGap())
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_panier))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(lbl_adress3)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pan_resto2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pan_resto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_adress1)
+                            .addComponent(lbl_adress2)
+                            .addComponent(jLabel13)
+                            .addComponent(lbl_adress3))
+                        .addGap(0, 263, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -392,7 +388,7 @@ public class accueil extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel14))
+                    .addComponent(lbl_panier))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbl_adress1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -439,7 +435,6 @@ public class accueil extends javax.swing.JFrame {
     private void lbl_connexionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_connexionMouseClicked
         IhmClient.ouvrir_connexion();
         IhmClient.bloquer_accueil();
-
     }//GEN-LAST:event_lbl_connexionMouseClicked
 
     private void lbl_inscriptionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_inscriptionMouseClicked
@@ -508,14 +503,14 @@ public class accueil extends javax.swing.JFrame {
         IhmClient.ouvrir_restaurant();
     }//GEN-LAST:event_lbl_adresseResto2MouseClicked
 
-    private void jLabel14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseEntered
+    private void lbl_panierMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_panierMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel14MouseEntered
+    }//GEN-LAST:event_lbl_panierMouseEntered
 
-    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+    private void lbl_panierMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_panierMouseClicked
         IhmClient.fermer_accueil();
         IhmClient.ouvrir_panier();
-    }//GEN-LAST:event_jLabel14MouseClicked
+    }//GEN-LAST:event_lbl_panierMouseClicked
 
     public void changePseudo(String mail) {
         lbl_inscription.setText("");
@@ -565,7 +560,6 @@ public class accueil extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -585,6 +579,7 @@ public class accueil extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_inscription;
     private javax.swing.JLabel lbl_livraisonResto1;
     private javax.swing.JLabel lbl_livraisonResto2;
+    private javax.swing.JLabel lbl_panier;
     private javax.swing.JLabel lbl_prixResto1;
     private javax.swing.JLabel lbl_prixResto2;
     private javax.swing.JLabel lbl_pseudo;
