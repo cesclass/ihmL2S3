@@ -35,6 +35,22 @@ public class profil extends javax.swing.JFrame {
         lbl_inscription = new javax.swing.JLabel();
         lbl_pseudo = new javax.swing.JLabel();
         lbl_deco = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        lbl_bienvenue = new javax.swing.JLabel();
+        lbl_panier = new javax.swing.JLabel();
+        lbl_bienvenue1 = new javax.swing.JLabel();
+        lbl_addresse1 = new javax.swing.JLabel();
+        lbl_addresse2 = new javax.swing.JLabel();
+        lbl_addresse3 = new javax.swing.JLabel();
+        btn_adresse = new javax.swing.JButton();
+        lbl_bienvenue2 = new javax.swing.JLabel();
+        lbl_carte1 = new javax.swing.JLabel();
+        lbl_carte2 = new javax.swing.JLabel();
+        lbl_carte3 = new javax.swing.JLabel();
+        btn_carte1 = new javax.swing.JButton();
+        lbl_bienvenue3 = new javax.swing.JLabel();
+        lbl_numero = new javax.swing.JLabel();
+        btn_numero = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Profil");
@@ -99,17 +115,128 @@ public class profil extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lbl_bienvenue.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbl_bienvenue.setText("Bienvenue !");
+
+        lbl_panier.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_panier.setText("Mon panier");
+        lbl_panier.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_panierMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbl_panierMouseEntered(evt);
+            }
+        });
+
+        lbl_bienvenue1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbl_bienvenue1.setText("Vos adresses :");
+
+        lbl_addresse1.setText("42 Rue nullepart - Nowhere 42000");
+
+        btn_adresse.setText("Ajouter");
+
+        lbl_bienvenue2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbl_bienvenue2.setText("Vos cartes bleues");
+
+        lbl_carte1.setText("Jean Personne : 1111-1111-1111-1111-1111");
+
+        btn_carte1.setText("Ajouter");
+
+        lbl_bienvenue3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbl_bienvenue3.setText("Votre numéro :");
+
+        lbl_numero.setText("0102030405");
+
+        btn_numero.setText("Modifier");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lbl_bienvenue)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_panier))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbl_bienvenue1)
+                                    .addComponent(lbl_addresse1)
+                                    .addComponent(lbl_addresse2)
+                                    .addComponent(lbl_addresse3)
+                                    .addComponent(btn_adresse))
+                                .addGap(405, 405, 405)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btn_carte1)
+                                    .addComponent(lbl_carte3)
+                                    .addComponent(lbl_carte2)
+                                    .addComponent(lbl_carte1)
+                                    .addComponent(lbl_bienvenue2)))
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                    .addComponent(lbl_numero)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btn_numero))
+                                .addComponent(lbl_bienvenue3, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_panier)
+                    .addComponent(lbl_bienvenue))
+                .addGap(79, 79, 79)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_bienvenue1)
+                    .addComponent(lbl_bienvenue2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_addresse1)
+                    .addComponent(lbl_carte1))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_addresse2)
+                    .addComponent(lbl_carte2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_addresse3)
+                    .addComponent(lbl_carte3))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_adresse)
+                    .addComponent(btn_carte1))
+                .addGap(110, 110, 110)
+                .addComponent(lbl_bienvenue3)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_numero)
+                    .addComponent(btn_numero))
+                .addContainerGap(318, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(808, 808, 808))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -137,12 +264,27 @@ public class profil extends javax.swing.JFrame {
         IhmClient.ouvrir_accueil();
     }//GEN-LAST:event_lbl_eatviteMouseClicked
 
+    private void lbl_panierMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_panierMouseClicked
+        IhmClient.fermer_profil();
+        IhmClient.ouvrir_panier();
+    }//GEN-LAST:event_lbl_panierMouseClicked
+
+    private void lbl_panierMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_panierMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl_panierMouseEntered
+
     public void changePseudo(String mail) {
         lbl_inscription.setText("");
         lbl_connexion.setText("");
         lbl_deco.setText("se déconnecter");
         lbl_pseudo.setText(mail);
+        lbl_bienvenue.setText("Bienvenue " + lbl_pseudo.getText());
     }
+    
+    public void ajouterAdresse() {
+        
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -178,13 +320,30 @@ public class profil extends javax.swing.JFrame {
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_adresse;
+    private javax.swing.JButton btn_carte1;
+    private javax.swing.JButton btn_numero;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lbl_addresse1;
+    private javax.swing.JLabel lbl_addresse2;
+    private javax.swing.JLabel lbl_addresse3;
+    private javax.swing.JLabel lbl_bienvenue;
+    private javax.swing.JLabel lbl_bienvenue1;
+    private javax.swing.JLabel lbl_bienvenue2;
+    private javax.swing.JLabel lbl_bienvenue3;
+    private javax.swing.JLabel lbl_carte1;
+    private javax.swing.JLabel lbl_carte2;
+    private javax.swing.JLabel lbl_carte3;
     private javax.swing.JLabel lbl_connexion;
     private javax.swing.JLabel lbl_deco;
     private javax.swing.JLabel lbl_eatvite;
     private javax.swing.JLabel lbl_inscription;
+    private javax.swing.JLabel lbl_numero;
+    private javax.swing.JLabel lbl_panier;
     private javax.swing.JLabel lbl_pseudo;
     // End of variables declaration//GEN-END:variables
 }
